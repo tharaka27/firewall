@@ -1,4 +1,4 @@
-Design and Implement a Firewall
+# Design and Implement a Firewall
 
 In this assignment we have implemented a firewall. 
 
@@ -16,26 +16,33 @@ Outbound firewall rules define the traffic allowed to leave the server on which 
 We have implemented 3 operations Accept, Decline and Reject which can be performed in the data packet. 
 
 
-Data preparation
+# Data preparation
+
 First the network traffic was captured using wireshark.
 
+![Image of Yaktocat](https://github.com/tharaka27/firewall/blob/master/images/tcp_wireshark.PNG)
 
 
 
 The captured data were saved in two files tcp.txt and udp.txt
 
-Process
+![Image of Yaktocat](https://github.com/tharaka27/firewall/blob/master/images/tcp_notepad.PNG)
+
+# Process
 
 First we check whether the packet is TCP or UDP packet using the 23rd byte in Packet.
 
+![Image of Yaktocat](https://github.com/tharaka27/firewall/blob/master/images/check%20for%20TCP%20and%20UDP.PNG)
+
 Second the data packets are checked for incoming or outgoing packets using the MAC address of the packet. For incoming packets inbound rules are applied. For outgoing packets outbound rules are applied.
 
-
+![Image of Yaktocat](https://github.com/tharaka27/firewall/blob/master/images/check%20for%20MAC.PNG)
 
 If the packet is allowed then it will be allowed to cross the firewall.
 
-Working example
+# Working example
 
+![Image of Yaktocat](https://github.com/tharaka27/firewall/blob/master/images/explanation.png)
 
 
 1 - The packet is detected as an outgoing packet hence outbound rules are applied. Since src and destination IPs and Ports are allowed to communicate, transmission is successful.
