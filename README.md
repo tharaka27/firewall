@@ -45,7 +45,7 @@ If the packet is allowed then it will be allowed to cross the firewall.
 ![Image of Yaktocat](https://github.com/tharaka27/firewall/blob/master/images/explanation.png)
 
 
-1 - The packet is detected as an outgoing packet hence outbound rules are applied. Since src and destination IPs and Ports are allowed to communicate, transmission is successful.
-2 - The packet is detected as an incoming packet hence inbound rules are applied. Since src and destination IPs and Ports are allowed to communicate, transmission is successful.
-3, 4- The source IP, port or destination IP,port is declined or rejected, transmission is unsuccessful.
-5 - Rules are not set for the given source IP address. Hence program request to assign rules. 
+* 1 - The packet is detected as an outgoing packet hence outbound rules are applied. Since src and destination IPs and Ports are allowed to communicate, transmission is successful.
+* 2 - The packet is detected as an incoming packet hence inbound rules are applied. Since src and destination IPs and Ports are allowed to communicate, transmission is successful.
+* 3, 4- The source IP, port or destination IP,port is declined or rejected, transmission is unsuccessful.
+* 5 - Rules are not set for the given source IP address. Hence program request to assign rules. 
