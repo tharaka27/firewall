@@ -15,10 +15,11 @@ def main(f):
         #print("Is coming in: ", end='')
         #print(isIncoming(['f8','34','41','21','87','7a'],s[6:12]))
 
-
+        MACaddress =s[6]+":"+s[7]+":"+s[8]+":"+s[9]+":"+s[10]+":"+s[11] 
 
         if(s[23]== "06"):
-            packet = tcp_packet(getIpAddress(s[26:30]), \
+            packet = tcp_packet(MACaddress,\
+                         getIpAddress(s[26:30]), \
                          getIpAddress(s[30:34]),\
                          getPort(s[34:36]), \
                          getPort(s[36:38]) )
@@ -27,7 +28,8 @@ def main(f):
 
 
         if(s[23]== "11"):
-            packet = udp_packet(getIpAddress(s[26:30]), \
+            packet = udp_packet(MACaddress,\
+                         getIpAddress(s[26:30]), \
                          getIpAddress(s[30:34]),\
                          getPort(s[34:36]), \
                          getPort(s[36:38]) )

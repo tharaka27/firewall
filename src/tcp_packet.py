@@ -1,14 +1,21 @@
 class tcp_packet():
 
-    def __init__(self, srcIP, dstIP, srcPort, dstPort):
+    def __init__(self, MACaddress, srcIP, dstIP, srcPort, dstPort):
+        self.MACaddress = MACaddress
         self.srcIP = srcIP
         self.dstIP= dstIP
         self.srcPort = srcPort
         self.dstPort = dstPort
 
+    def getMACaddress(self):
+        return self.MACaddress
+
     def getSrcIP(self):
         return self.srcIP
 
+    def getMACaddress(self):
+        return self.MACaddress
+    
     def getDstIP(self):
         return self.dstIP
 
